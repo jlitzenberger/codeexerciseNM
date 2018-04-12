@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>  
+  <img width="100" src="../assets/5895deb9cba9841eabab6099.png">
+</div>
+
+<div class='row'>
+    <div class='col-md-2'>Filter by Team Name:</div>
+    <div class='col-md-4'>
+        <input class="form-control" type='text' [(ngModel)]='listFilter' />
+    </div>
+</div>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>Abv</th>
+                <th>Conf</th>
+                <th>Conf/Div</th>
+                <th>City</th>
+                <th>Logo Id</th>
+                <th>Nick Name</th>
+                <th>Arrest Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let teamArrest of filteredTeamArrests">
+                <td>{{teamArrest.Team_preffered_name}}</td>
+                <td>{{teamArrest.Team}}</td>
+                <td>{{teamArrest.Team_Conference}}</td>
+                <td>{{teamArrest.Team_Conference_Division}}</td>
+                <td>{{teamArrest.Team_city}}</td>
+                <td>{{teamArrest.Team_logo_id}}</td>
+                <td>{{teamArrest.Team_name}}</td>                
+                <td>{{teamArrest.arrest_count}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
